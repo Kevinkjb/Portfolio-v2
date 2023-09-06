@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Nav Section */
+.main-nav a:hover,
+.main-nav .active,
+.main-nav .active:focus,
+.main-nav li:hover>a{
+    color: #eaac4e ;
+    transition: .3s ease;
+}
+#header{
+    z-index: 1;
+}
+.nav-item{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0;
+    
+}
+.nav-list, .nav-link{
+    margin: 0 .5rem;
+    padding: .8rem;
+    list-style-type: none;
+    text-decoration: none !important;
+    color: #7e7d7d;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+.nav-brand{
+    margin: 0 .5rem;
+    padding: .8rem;
+    font-size: 2rem;
+    color: #000;
+    font-weight: 900;
+    text-decoration: none !important;
+    font-family: 'Roboto', sans-serif;
+}
+.nav-brand:hover{
+    transition: .3s ease;
+    color: #eaac4e ;
+}
+.head-container{
+    position: relative;
+    background-color: #fff;
+    /* box-shadow: .6px .6px .6px .6px #000; */
+}
+
+/* Hero Section */
+
+/* #hero{ */
+    /* background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg/1200px-Altja_j%C3%B5gi_Lahemaal.jpg") repeat scroll center center/cover; */
+    /* background: linear-gradient(-45deg, #ffffff, #5c5750, #000000, #ffffff);
+    background-size: 400% 400%;
+    height: 80vh;
+    width: 100%;
+    animation: gradient 10s ease infinite; */
+/* } */
+.hero-title{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 80vh;
+}
+/* Wave effect */
+ #hero{
+    overflow: hidden;
+    background: linear-gradient(315deg, rgba(60,132,206,1) 38%, rgb(0, 0, 0, .8) 68%, rgb(241, 152, 69) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    margin: auto;
+}
+.wave {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 1000% 1000% 0 0;
+    position: absolute;
+    width: 100%;
+    height: 12em;
+    animation: wave 8s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    top: 65rem;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.wave-two {
+    animation: wave 15s linear reverse infinite;
+    opacity: 0.8;
+    overflow: hidden;
+}
+
+.wave-three {
+    animation: wave 15s -1s reverse infinite;
+    opacity: 0.9;
+    overflow: hidden;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-1%);
+    }
+
+    50% {
+        transform: translateX(-20%);
+    }
+
+    75% {
+        transform: translateX(-1%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.hero-content h1{
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+.typewriter h1{
+    color: #eaac4e;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #999999; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    margin-bottom: 2rem;
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-effect .5s step-end infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-effect {
+    from, to { border-color: transparent }
+    50% { border-color: #eaac4e }
+  }
+.hero-list{
+    display: flex;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.hero-list li a i{
+    padding-right: 1.5rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 676px){
+    .hero-content h1{
+        font-size: 2.5rem;
+
+    }
+    .hero-title{
+        height: 100vh;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .hero-title p{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 510px){
+    .hero-content h1{
+        font-size: 1.8rem;
+
+    }
+    .hero-title{
+        height: 100vh;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .hero-title p{
+        font-size: 13px;
+    }
+    #hero{
+        height: 100%;
+        width: 100%;
+    }
+    .hero-content{
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 440px){
+    .hero-title{
+        margin: 0;
+    }
+}
+
+/* About Section */
+/* 
+#about{
+    background-color: #f7f7f7;
+    height: 100%;
+    padding: 3rem 0;
+    margin: 0 auto;
+}
+
+.profile-img{
+    width: 100%;
+}
+.about-info{
+    display: flex;
+    flex-direction: column;
+    color: #999999;
+    padding: 3rem 4rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+.about-info p{
+    width: 100%;
+    margin-top: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+} */
+
+
+
+/* Portfolio Section */
+
+
+#portfolio{
+    padding: 3rem 0;
+    margin-top: 5rem;
+}
+.portfolio-heading h1{
+    background:  #eaac4e;
+    width: 10rem;
+    height: 13px;
+    display: flex;
+    align-items: end;
+}
+.portfolio-heading h1:hover{
+    transition: .4s ease;
+    width: 5rem;
+    cursor: pointer;
+}
+
+.container > .portfolio-heading{
+    margin: 2rem 0;
+    margin-bottom: 5rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+
+}
+.container .portfolio-heading  > h1{
+    font-weight: 600;
+    color: #292929;
+    font-size: 2rem;
+
+}
+
+
+  .project-title-box h5{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #7e7d7d;
+    margin-bottom: 1rem;
+  }
+  .project-title{
+    font-size: 2.5rem;
+  }
+
+  .skills{
+    background-color: #000;
+    color: #fff;
+    padding: .4rem 1rem;
+    margin-right: 5px;
+    font-size: 13px;
+  }
+  .skills-info{
+    margin: 2rem 0;
+  }
+  .project-btn{
+    border: none;
+    background-color: #eaac4e;
+    color: #fff;
+    width: 8rem;
+    height: 50px;
+    font-size: 14px;
+    margin: 1rem 2rem 0 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: .3s ease;
+  }
+  .project-btn:hover{
+    transform: scale(1.2);
+    box-shadow: 2px 2px 2px #7e7d7d;
+
+  }
+  .project-info p{
+    line-height: 1.8;
+  }
+  .project-box{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .img-project{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 25px;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+  .project-box a .img-project:hover{
+    transform: translateY(-10px);
+    box-shadow: 30px 20px 10px 3px #7e7d7d;
+    transition: .3s ease;
+    opacity: .8;
+  }
+
+  .box-project{
+    margin-bottom: 10rem;
+  }
+  .coming-soon{
+    border: 1px solid #999999;
+  }
+
+
+/* Contact Section */
+#contact{
+    margin-top: 10rem;
+    padding: 3rem 0;
+    margin-bottom: 4rem;
+}
+.contact-title > h1{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.contact-details{
+    list-style-type: none;
+    text-align: left;
+    padding-left: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #898989;
+    line-height: 2;
+    font-weight: 400;
+}
+
+.form-group{
+    border: 1px solid #999999;
+}
+.form-group input{
+    font-weight: 600;
+    border: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 1rem 1rem 1rem .7rem;
+    width: 100%;
+}
+.form-group textarea{
+    font-weight: 600;
+    border: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: .2rem 4rem 6rem .7rem;
+    width: 100%;
+}
+input:focus, textarea:focus{
+    outline: 1px solid #66BFBF;
+}
+.button-btn{
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #292929;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+.button-item button:hover{
+    background-color: rgba(1, 1, 1, 0.7);
+    transition: .5s ease;
+}
+
+/* Footer Section */
+#footer{
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+.footer-social li a i{
+    padding: 0 1rem;
+    color: #999999;
+}
+.copyrights{
+    font-size: 13px;
+    color: #999999;
+    font-weight: 600;
+    letter-spacing: 2px;
+    
+}
+.designby{
+    color: #999999;
+    font-size: .9rem;
+    font-weight: 300;
+
+
+}
+.container .designby > a{
+    color: #000;
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+/* Mobile Devices Section */
+@media screen and (max-width: 1200px){
+    .about-info{
+        padding: 0;
+    }
+    .about-info p{
+        width: 100%;
+    }
+    .profile-img{
+        width: 100%;
+    }
+    .img-container{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 992px){
+
+    .profile-img{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 767px){
+    .about-info{
+        padding: 0;
+    }
+    .about-info p{
+        width: 100%;
+    }
+    .main-nav{
+        display: none;
+    }
+}
+@media screen and (max-width: 574px){
+    #about, #services, #contact, #services{
+        padding: 2rem 1rem;
+    }
+    .hero-title{
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .about-info{
+        padding: 1rem;
+    }
+    .about-info h3{
+        font-size: 1.3rem;
+    }
+    .about-info p{
+        width: 100%;
+        font-size: 13px;
+    }
+    #contact{
+        margin-top: 5rem;
+        padding: 0 1rem;
+    }
+    #services, #skills, #about {
+        padding: 2rem 1rem;
+    }
+    #skills{
+        padding-top: 2rem;
+    }
+    .hero-title{
+        height: 70vh;
+    }
+    #hero{
+        height: 70%;
+    }
+
+    .portfolio-img{
+        padding: 0 1rem;
+        overflow: hidden;
+    }
+
+
+}
+
