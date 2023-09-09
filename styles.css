@@ -24,14 +24,14 @@ body{
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 0;
-    
+
 }
 .nav-list, .nav-link{
     margin: 0 .5rem;
     padding: .8rem;
     list-style-type: none;
     text-decoration: none !important;
-    color: #7e7d7d;
+    color: #000000;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -58,14 +58,6 @@ body{
 
 /* Hero Section */
 
-/* #hero{ */
-    /* background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg/1200px-Altja_j%C3%B5gi_Lahemaal.jpg") repeat scroll center center/cover; */
-    /* background: linear-gradient(-45deg, #ffffff, #5c5750, #000000, #ffffff);
-    background-size: 400% 400%;
-    height: 80vh;
-    width: 100%;
-    animation: gradient 10s ease infinite; */
-/* } */
 .hero-title{
     display: flex;
     align-items: center;
@@ -73,61 +65,32 @@ body{
     height: 80vh;
 }
 /* Wave effect */
- #hero{
-    overflow: hidden;
-    background: linear-gradient(315deg, rgba(60,132,206,1) 38%, rgb(0, 0, 0, .8) 68%, rgb(241, 152, 69) 98%);
-    animation: gradient 15s ease infinite;
-    background-size: 400% 400%;
+#hero{
+    width: 100%;
+    background-image: url("images/software.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
     margin: auto;
 }
-.wave {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 1000% 1000% 0 0;
-    position: absolute;
-    width: 100%;
-    height: 12em;
-    animation: wave 8s -3s linear infinite;
-    transform: translate3d(0, 0, 0);
-    opacity: 0.8;
-    top: 65rem;
-    left: 0;
-    right: 0;
-    z-index: 1;
+#hero::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: .6;
+  background-color: black;
 }
-.wave-two {
-    animation: wave 15s linear reverse infinite;
-    opacity: 0.8;
-    overflow: hidden;
-}
-
-.wave-three {
-    animation: wave 15s -1s reverse infinite;
-    opacity: 0.9;
-    overflow: hidden;
-}
-
-@keyframes wave {
-    2% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(-1%);
-    }
-
-    50% {
-        transform: translateX(-20%);
-    }
-
-    75% {
-        transform: translateX(-1%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
 
 .hero-content h1{
     font-size: 3rem;
@@ -217,39 +180,7 @@ body{
         margin: 0;
     }
 }
-
-/* About Section */
-
-#about{
-    background-color: #f7f7f7;
-    height: 100%;
-    padding: 3rem 0;
-    margin: 0 auto;
-}
-
-.profile-img{
-    width: 100%;
-}
-.about-info{
-    display: flex;
-    flex-direction: column;
-    color: #999999;
-    padding: 3rem 4rem;
-    font-family: 'Roboto', sans-serif;
-
-}
-.about-info p{
-    width: 100%;
-    margin-top: 1rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    line-height: 1.8;
-}
-
-
-
 /* Portfolio Section */
-
 
 #portfolio{
     padding: 3rem 0;
@@ -273,40 +204,36 @@ body{
     margin-bottom: 5rem;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-
 }
 .container .portfolio-heading  > h1{
     font-weight: 600;
     color: #292929;
     font-size: 2rem;
-
 }
-
-
-  .project-title-box h5{
+.project-title-box h5{
     font-size: 1rem;
     letter-spacing: 1px;
     font-weight: 400;
     text-transform: uppercase;
     color: #7e7d7d;
     margin-bottom: 1rem;
-  }
-  .project-title{
+}
+.project-title{
     font-size: 2.5rem;
-  }
+}
 
-  .skills{
+.skills{
     background-color: #000;
     color: #fff;
     padding: .4rem 1rem;
     margin-right: 5px;
     font-size: 13px;
-  }
-  .skills-info{
+}
+.skills-info{
     display: flex;
     margin: 2rem 0;
-  }
-  .project-btn{
+}
+.project-btn{
     border: none;
     background-color: #eaac4e;
     color: #fff;
@@ -317,56 +244,123 @@ body{
     font-weight: 600;
     letter-spacing: 1px;
     transition: .3s ease;
-  }
-  .project-btn:hover{
+}
+.project-btn:hover{
     transform: scale(1.2);
     box-shadow: 2px 2px 2px #7e7d7d;
-
-  }
-  .project-info p{
+}
+.project-info p{
     line-height: 1.8;
-  }
-  .project-box{
+}
+.project-box{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-
-  .img-project{
+}
+.img-project{
     width: 20rem;
     height: 20rem;
     border-radius: 25px;
     margin: 0 auto;
     object-fit: cover;
-  }
-  .project-box a .img-project:hover{
+}
+.project-box a .img-project:hover{
     transform: translateY(-10px);
     box-shadow: 30px 20px 10px 3px #7e7d7d;
     transition: .3s ease;
     opacity: .8;
-  }
+}
 
-  .box-project{
+.box-project{
     margin-bottom: 10rem;
-  }
-  .coming-soon{
+}
+.coming-soon{
     border: 1px solid #999999;
-  }
+}
+
+/* About Section */
+
+#about{
+    width: 100%;
+    background-image: url("images/photo-1451187580459-43490279c0fa.avif");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    margin: auto;
+}
+#about::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .4;
+    background-color: black;
+}
+
+.profile-img{
+    width: 100%;
+}
+.about-info{
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    padding: 3rem 4rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+.about-info p{
+    width: 100%;
+    margin-top: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.content-container{
+  opacity: 0;
+  transform: translateY(200px);
+  transition: opacity 1.3s ease, transform 1.3s ease;
+}
+.content-container.active{
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 /* Contact Section */
 #contact{
-    margin-top: 10rem;
+    margin-top: 3rem;
     padding: 3rem 0;
     margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
 }
-.contact-title > h1{
+.contact-title > h2{
     font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    font-size: 2.3rem;
+    font-size: 3rem;
     font-weight: 600;
     margin-bottom: 2rem;
+}
+
+.contact-email{
+    font-size: 1.2rem;
+    color: #eaac4e;
+    font-weight: 600;
+}
+.contact-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .contact-details{
     list-style-type: none;
@@ -378,78 +372,53 @@ body{
     font-weight: 400;
 }
 
-.form-group{
-    border: 1px solid #999999;
-}
-.form-group input{
-    font-weight: 600;
-    border: none;
-    font-size: 12px;
-    text-transform: uppercase;
-    padding: 1rem 1rem 1rem .7rem;
-    width: 100%;
-}
-.form-group textarea{
-    font-weight: 600;
-    border: none;
-    font-size: 12px;
-    text-transform: uppercase;
-    padding: .2rem 4rem 6rem .7rem;
-    width: 100%;
-}
-input:focus, textarea:focus{
-    outline: 1px solid #66BFBF;
-}
-.button-btn{
-    width: 100%;
-    padding: 1rem 0;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: #292929;
-    border: none;
-    color: #fff;
-    font-size: 12px;
-    cursor: pointer;
-}
-.button-item button:hover{
-    background-color: rgba(1, 1, 1, 0.7);
-    transition: .5s ease;
-}
-
 /* Footer Section */
 #footer{
-    padding: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f7f7f7;
+    background-color: rgb(18, 30, 39);
+    height: 10rem;
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-social{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     font-size: 1.8rem;
+    list-style: none;
+    margin-bottom: 1rem;
 }
 .footer-social li a i{
-    padding: 0 1rem;
-    color: #999999;
+    padding-right: 1.8rem;
+    color: #ffffff;
+    transition: all .4s;
+}
+.footer-social li a i:hover{
+    padding-right: 1.8rem;
+    color: #eaac4e;
+    transition: all .4s;
 }
 .copyrights{
     font-size: 13px;
-    color: #999999;
+    color: #ffffff;
     font-weight: 600;
     letter-spacing: 2px;
-    
+    margin-bottom: 1rem;
 }
 .designby{
-    color: #999999;
+    color: #ffffff;
     font-size: .9rem;
     font-weight: 300;
-
-
+        margin-bottom: 0;
 }
 .container .designby > a{
-    color: #000;
+    color: #eaac4e;
     text-decoration: none;
     font-size: .9rem;
 }
