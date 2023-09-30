@@ -7,6 +7,9 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+a{
+    text-decoration: none;
+}
 
 /* Nav Section */
 .main-nav a:hover,
@@ -122,8 +125,8 @@ body{
 .hero-content h1{
     font-size: 3rem;
     font-family: 'Roboto', sans-serif;
-
 }
+
 .typewriter h1{
     color: #eaac4e;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -258,7 +261,9 @@ body{
 }
 .skills-info{
     display: flex;
+    flex-wrap: wrap;
     margin: 2rem 0;
+    width: 80%;
 }
 .project-btn{
     border: none;
@@ -309,12 +314,12 @@ body{
 
 #about{
     width: 100%;
-    background-image: url("images/photo-1451187580459-43490279c0fa.avif");
+    background-image: url("images/software.jpeg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 40vh;
+    height: 30rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -330,7 +335,7 @@ body{
     bottom: 0;
     left: 0;
     z-index: -1;
-    opacity: .4;
+    opacity: .7;
     background-color: black;
 }
 
@@ -346,6 +351,10 @@ body{
     font-family: 'Roboto', sans-serif;
 
 }
+.profile-img{
+    border-radius: 100%;
+    width: 25rem;
+}
 .about-info p{
     width: 100%;
     margin-top: 1rem;
@@ -354,12 +363,30 @@ body{
     line-height: 1.8;
 }
 
-.content-container{
+.content-animation{
   opacity: 0;
   transform: translateY(200px);
   transition: opacity 1.3s ease, transform 1.3s ease;
 }
-.content-container.active{
+.content-animation.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+.content-animation-two{
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: opacity 1.3s ease, transform 1.3s ease;
+}
+.content-animation-two.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+.content-animation-three{
+  opacity: 0;
+  transform: translateX(200px);
+  transition: opacity 1.3s ease, transform 1.3s ease;
+}
+.content-animation-three.active{
   opacity: 1;
   transform: translateY(0);
 }
@@ -454,12 +481,21 @@ body{
 
 /* ARRROW UP TO NAVIGATE TO TOP */
 .arrow-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.5rem;
     color: #eaac4e;
     position: fixed;
     bottom: 2rem;
+    right: 1rem;
     z-index: 1000;
     margin-left: 96%;
+    background-color: #ffffff;
+    box-shadow: 2px 3px 4px #000;
+    width: 2rem;
+    border-radius: 50%;
+    height: 2rem;
 }
 .arrow-up a{
     color: #eaac4e;
@@ -504,6 +540,25 @@ body{
     .project-box{
         margin-top: 3rem;
         justify-content: start;
+    }
+    html, body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .content-container{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    .content-animation-two{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    .content-animation-three{
+        opacity: 0;
+        transform: translateX(50px);
     }
 }
 
@@ -589,14 +644,15 @@ body{
 
 @media screen and (max-width: 420px){
     .hero-title{
-        height: 50vh;
+        height: 30rem;
     }
     #hero{
-        height: 50vh;
+        height: 25rem;
     }
     .hero-content{
         position: relative;
         left: -10%;
+        top: 2rem;
     }
     .hero-list li .social-link i{
         font-size: 1.2rem;
@@ -632,7 +688,7 @@ body{
     }
     .hero-content{
         position: relative;
-        left: -8%;
+        left: -13%;
     }
     .portfolio-img{
         padding: 0 1rem;

@@ -1,8 +1,34 @@
 
 // SCROLL ANIMATION
-const contentContainers = document.querySelectorAll(".content-container");
+const contentAnimation = document.querySelectorAll(".content-animation");
+const contentAnimationTwo = document.querySelectorAll(".content-animation-two");
+const contentAnimationThree = document.querySelectorAll(".content-animation-three");
 function checkContainerInView() {
-  contentContainers.forEach((container, index) => {
+  contentAnimation.forEach((container, index) => {
+    const rect = container.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 1 && rect.bottom > 0) {
+      container.classList.add("active");
+    } 
+    // else {
+    //   container.classList.remove("active");
+    // } THIS RE ANIMATE THE SECTIONS
+    setTimeout(() => {
+      section.classList.add("fadeIn");
+    }, index * 1000); // Delay each section by 1000ms
+  });
+  contentAnimationTwo.forEach((container, index) => {
+    const rect = container.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 1 && rect.bottom > 0) {
+      container.classList.add("active");
+    } 
+    // else {
+    //   container.classList.remove("active");
+    // } THIS RE ANIMATE THE SECTIONS
+    setTimeout(() => {
+      section.classList.add("fadeIn");
+    }, index * 1000); // Delay each section by 1000ms
+  });
+  contentAnimationThree.forEach((container, index) => {
     const rect = container.getBoundingClientRect();
     if (rect.top < window.innerHeight * 1 && rect.bottom > 0) {
       container.classList.add("active");
