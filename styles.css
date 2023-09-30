@@ -327,6 +327,9 @@ a{
     position: relative;
     margin: auto;
 }
+.about-section{
+    margin: 0 auto;
+}
 #about::after{
     content: "";
     position: absolute;
@@ -659,6 +662,12 @@ a{
     }
     .head-container{
         padding: 0;
+    }
+    .skills-info{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+        width: 100%;
     }
     .arrow-up{
         margin-left: 93%;
