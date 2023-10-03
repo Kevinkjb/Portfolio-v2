@@ -127,13 +127,15 @@ a{
     font-family: 'Roboto', sans-serif;
 }
 
+
 .typewriter h1{
     color: #eaac4e;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #999999; /* The typwriter cursor */
+    border-right: .15rem solid #999999; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     letter-spacing: .15em; /* Adjust as needed */
     margin-bottom: 2rem;
+    width: 34rem;
     animation: 
     typing 3.5s steps(30, end),
     blink-effect .5s step-end infinite;
@@ -151,7 +153,7 @@ a{
 }
 @keyframes typing {
     from { width: 0 }
-    to { width: 100% }
+    to { width: 34rem }
   }
   
   /* The typewriter cursor effect */
@@ -169,11 +171,15 @@ a{
     color: #fff;
     font-size: 1.5rem;
 }
+.hero-list li .social-link i:hover{
+    color: #eaac4e;
+    transition: all .4s;
+}
 
 @media screen and (max-width: 676px){
     .hero-content h1{
         font-size: 2.5rem;
-
+        width: 28rem;
     }
     .hero-title{
         height: 100vh;
@@ -183,12 +189,20 @@ a{
     .hero-title p{
         font-size: 15px;
     }
+    @keyframes typing {
+    from { width: 0 }
+    to { width: 28rem }
+  }
 }
 @media screen and (max-width: 510px){
     .hero-content h1{
         font-size: 1.8rem;
-
+        width: 20.5rem;
     }
+    @keyframes typing {
+    from { width: 0 }
+    to { width: 20.5rem }
+  }
     .hero-title{
         height: 100vh;
         width: 80%;
@@ -196,6 +210,9 @@ a{
     }
     .hero-title p{
         font-size: 13px;
+    }
+    .hero-content p {
+        width: 20.5rem;
     }
     #hero{
         height: 100%;
@@ -636,6 +653,10 @@ a{
     .typewriter h1{
         border-right: .15em solid #999999; /* The typwriter cursor */
     }
+    .project-info p {
+        font-size: 13px;
+        padding-right: 1.8rem;
+    }
     .about-info p{
         font-size: 13px;
         line-height: 1.8;
@@ -668,6 +689,9 @@ a{
         flex-wrap: wrap;
         margin: 2rem 0;
         width: 100%;
+    }
+    .project-info p {
+        font-size: 12px;
     }
     .arrow-up{
         margin-left: 93%;
